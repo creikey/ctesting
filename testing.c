@@ -43,10 +43,13 @@ void _t_assert(bool expr, int line_numb, const char * file, const char * expr_te
   }
 }
 
-void t_end() {
+int t_end() {
   printf("[ testing end ]\n\n");
-  _t_suit_name = NULL;
+    _t_suit_name = NULL;
   _t_name = NULL;
-  _t_failed = false;
   _t_failures = 0;
+  if(_t_failed == true) {
+    return -1;
+  }
+  return 0;
 }
