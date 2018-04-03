@@ -32,3 +32,5 @@ headers:
 clean:
 	-rm $(OFILES)
 	-rm $(GCHFILES)
+	-rm -r lib/
+	-rm -r include/

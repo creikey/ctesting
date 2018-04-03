@@ -30,6 +30,6 @@ void _t_assert(bool expr, int line_numb, const char *file,
 #define T_ASSERT(x) _t_assert(x, __LINE__, __FILE__, #x)
 
 // t_end ends testing
-void t_end();
+int t_end();
 
 #endif
